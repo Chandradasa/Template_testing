@@ -1,0 +1,809 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+<marquee> keep on learning  programming; when you hit a wall, take a break</marquee>
+
+<a href="comments.html"> add comments</a>
+<a href="/MainPage"> test connection</a>
+<br><br>
+
+{% for note in notes %}
+
+    <div class="col-6">
+        <div class = "lesson-notes">
+         <div class="lesson-title">
+          <h2> {{  notes [0] [1] }}</h2>
+
+         {{  notes [0][0]  }} 
+          
+              
+
+
+         </div>
+        </div>
+    </div>
+
+    {% endfor %}
+
+
+  <h1 class="title"> Intro to programming</h1>
+
+
+    <div class="row">
+      <div class="col-6">
+        <div class = "lesson-notes">
+        <div class="lesson-title">
+          <h2> Lesson 1.1: The Basics of the Web and HTML</h2>
+           </div>
+          <div class = "lesson 1.1">
+        
+         lesson_1.1 = """ 
+          <h4>New start</h4>
+          <p> HTML hyper text markup language , is the main part of the web</p>
+          <p> HTTP is the language to comms with servers</p>
+          <h3> tags</h3>
+          <p> from tag to tag is an element</p>
+             breaks a line
+            <br>= br tag
+          <p> <em>  em tag makes content italics </em>
+          <br> <b> b tag makes bold</b></p>
+          <p> tag with end tag is a void tag
+          <br> inline tags have no boxes around them ; block takes have boxes</p>
+          <p> to add a link use a tag anchor and href = web link<a href= "http://www.bbc.com"> The BBC</a></p>
+          <p> to add image use img tag wih attribute src(source)
+          </p>
+          inline tags do not have space eg padding. block tags eg div is a block has invisable box 
+          Span inline can add style. 
+          """
+          </div>
+        </div>
+      </div>
+  <div class="col-6">
+    <div class="lesson-notes">
+      <div class="lesson-title">
+            <h2>  lesson 1.2: Creating a Structured Document</h2>
+      </div>
+              <p> developer tools in chrome can be used to hw a site is created</p>
+            <p>  HTML is provides  layout and content <br> 
+             CSS cascaded style sheet adds style and javascript provides action </p>
+             <ul>             
+              <li> HTMLlanguage of the web </li>
+              <li> CSS language Style  </li>
+              <li> DOM document object model  uses tags from HTML</li>
+             </ul>
+             <p> Web pages  can be divided into <b>boxes</b> using div tags </p>
+             <p> CSS can be inline, in head section or external</p>
+             <p> clase atribute can be used  to add style. Id used for one section</p>
+             <p> programmers need to avoid repeat code as it takes more time;more chance of errors. do no repeat code; can used style calling class on multiple areas of the web site</p>
+             <p> computer codes being structured, improves clarity,quality and development time.Logical flow</p>
+    </div>
+  </div>
+</div>
+ <div class="row">
+ <div class="col-6">
+    <div class="lesson-notes">
+      <div class="lesson-title">
+          <h2> lesson 1.3:  adding CSS Style and HTML Structure</h2>
+      </div>
+          <p> CCS uses inheritance  which uses style from higher up, however the lower takes preference</p>
+          <p> can add CSS, in 3 ways</p>
+          <ul>
+            <li> in head</li>
+            <li> in line</li>
+            <li> external</li>
+        </ul>
+          <p>  adding style  can call p selector {} ; class using dot . {}, id #<br>
+          use documentation on web to find  ccs atrributs, background-color is  <b> property </b> and black is the <b>  value </b>
+          propery and value is <b> declaration</b> <br></p>
+         <p>  link rel="stylesheet" type="text/css" href="main.css",  to call external style</p>
+          <p> HTML comment &lt;ignore!-->  CSS /* */ &gt;</p>
+          <P> Code ,test refine: can use dev tools to see results</P>
+          <p> can put html and css code into w3s validator to check that it meets standards</p>
+          <p> To verify HTML: <a href="https://validator.w3.org/nu/ ">HTML validation</a> 
+          To verify CSS:<a href="http://jigsaw.w3.org/css-validator/#validate_by_input"> CSS validation</a> </p>
+          <p> using grid css to divide web page into boxes</p>
+          <span style="color:red"> make sure you verify html and css</span>
+    </div>
+  </div>
+<div class="col-6">     
+  <div class="lesson-notes">
+     <div class="lesson-title">
+          <h2> lesson 2.1  Introduction to serious programming</h2>
+      </div>
+      <div>
+         <p>Break a problem into small pieces</p>
+        <p>Computer not useful without program,<br> computer can do anything.
+        Program tells computer what to do
+        <br>
+        Precise sequence of steps. Computer needs steps
+        </p> 
+        <h4> Python</h4>
+        <p>high-level language
+          Input 
+          Interpreter:  python interprets program and translate to computer code
+          </p>
+
+          Procedural thinking : following the instructions in your code
+          Technological empathy
+          abstract thinking
+           <p>#  to add python comments without affecting code</p> 
+              Print  command  to see results <br>
+              Natural languages. Ambiguity , verbosity ( long to describe) <br>
+              python  Grammar  is strict not like spoken languages
+              <p>
+              Sentence   -> subject Verb object<br>
+              Backus naur form : exactly describe what to do in simple terms
+              </p>
+              Non terminal  ( not finished). -> replacement<br>
+              Terminal = end and on left <br>
+              Replacing with terminal<br>
+              Derivation when we have terminals left<br>
+              <h4>Rules of language </h4>
+              <ul>
+                <li>Expression -> expression  operator expression</li>
+                <li> Expression.    Numbers</li>
+                <li> Operator.  + *</li>
+                <li> Numbers.   0, 1,  etc</li>
+                <li> Expression.  ->.  ( expression)</li>
+              </ul>
+          <p>    
+            Recursive definition: expressions on both sides and a number on left side
+          </p>
+
+      </div>
+          
+    </div>
+  </div>
+  </div>
+<div class="row">
+ <div class="col-6">
+    <div class="lesson-notes">
+      <div class="lesson-title">
+          <h2> lesson 2.2 variable and strings </h2>
+      </div>
+            <p> Variable can have any value assigned to it
+              = assign value to variable </p>
+
+        <ul>
+            <li> Variables can change</li>
+            <li> Variable does not start with capital , conversion</li>
+            <li> Variable does not equal the value on the left but it has been assigned to it</li>
+            <li> external</li>
+
+          </ul>
+          <p> String is a group of characters, inside single or double quotes</p>
+          <p>Assign a variable to string</p>
+          <p>Add stings together is called concatenation</p>
+          <p>pace in quote at end to provide space between strings </p>
+          <P>Cannot  add number and string but can multiply string </P>
+          <p>String  characters with "" '' can be empty</p>
+
+          <h4>Indexing strings.</h4>
+            [ ]  <b>0 is the first character</b> <br>
+            -1 counts from left first character 
+            <p>String [ number]   Calls character at the number<br>
+            String [  number1 : number2].  Calls character  at n1 to character just before n2</p>
+            Can leave one entry empty  or both <br>
+            <h4>Procedure = functions</h4>
+            <p>Find is a method built in procedure
+              String .find ( smaller string).    Give the first position  of smaller string.</p>
+              Smaller string  called <em>parameter,</em> can have more that 1 parameter.<br>   
+              <p> <b>Smaller string,1 </b> means find smaller string  from position 1 </p>
+              <P>Edge case, outliner situation</P>
+              [0] for empty string gives error <br>
+              [ 0:]  for empty string give 0 <br>
+               Sub sequence operator <br>
+               <span style="color:red"> Print triple quotes for multiple lines </span>          
+    </div>
+  </div>
+<div class="col-6">     
+  <div class="lesson-notes">
+      <div class="lesson-title">
+          <h2> lesson 2.3 input function output </h2>
+      </div>
+            <p>
+            <b>Function or procedure</b> <br> </p>
+             <p>Function : set of actions which can be call multiple times.<br>
+              Parentheses ( )  where to declare inputs, variables
+              </p>
+              <p>Without a <b>return</b>, procedure does not return anything </p>
+              <p>Once a function  is created , it can be used <br>
+              Inputs entered into function and output occurs</p>
+                <b>Example </b>
+             <ul> 
+                <li>  def sum (a,b) </li>
+                <li> a= a+b </li>
+                <li>  return a</li>
+             </ul>              
+                <p>Procedural compersion </p> <br>
+                  def square (n):  note : <br>
+                    return n*n <br>
+
+                      x=37 <br>
+                <p>  print square(square(x)) </p>                      
+    </div>
+  </div>
+ </div>
+<div class="row">
+ <div class="col-6">
+    <div class="lesson-notes">
+      <div class="lesson-title">
+          <h2> lesson 2.4 Control flow: Loops if and while</h2>
+      </div>
+        <div>
+       <h4>Comparison</h4>
+             <p>Greater than and less than brackets are used<br>
+
+             equal to  ==    
+             not equal to!= </p>
+
+             <p> = means assignment.
+
+          If greater or less than (test expression) <br>
+
+                    Block </p>
+
+            ==.   Returns true or false
+
+                OR can be used not  capital<br>
+                <p> First expression then true , if first false then check second expression is checked. </p>
+
+                def bigger (a,b): <br>
+                    If a>b:<br>
+                      return a<br>
+                    else: <br>
+                        return <br>
+                def biggest (a,b,c): <br>
+                      return bigger ( bigger (a,b),c) <br>
+
+                  <p>Procedure within a procedure
+                  return.max(a,b,c) <p>
+
+                  <p>
+            Loop while   Continues until, test expression is false
+            While (test expression):
+            (block)
+            </p>
+      </div>
+    </div>
+  </div>
+<div class="col-6">     
+  <div class="lesson-notes">
+      <div class="lesson-title">
+          <h2> lesson 2.5   Debugging</h2>
+      </div>
+      <div>        
+            <h4>All programs will have bugs at first, expect it.
+            </h4>
+
+              <p>have a strategy to debug <br>
+              Error message in python is called traceback <br>
+              Can look up error message on the web. <br> Look at the last line in error message </p>
+            <p>When using example code, try use the original code and make small changes </p>
+            <p>Also check example code does what you want it to do 
+            </p>
+            <p>Try add print statements in the code to see results in part of code  <br>
+            Remove print after debug. Comment out code when debugging </p>
+
+            <p>Use version controls so old version are available. Github </p>
+            <h3> Slide Show</h3>
+            <ul>
+              <li>What are the inputs</li>
+              <li>What  are the outputs</li>
+              <li>So need function to convert i/p to o/p</li>
+              <li>
+                  Break the function into smaller functions </li>
+              <li>Eg only 1 title and 1 description to add html</li>
+              <li>
+                  Second function to get concept by number</li>
+              <li>2 smaller functions title number and description number</li>
+              <li>
+                4 smaller functions instead of 1 big one</li>
+
+            </ul>          
+    </div>
+  </div>
+  </div>
+ </div>
+  <div class="row">
+ <div class="col-6">
+    <div class="lesson-notes">
+      <div class="lesson-title">
+          <h2> lesson 2.6  Structured Data: Lists and foor loops</h2>
+      </div>
+        <div>
+              <h3>Structured data </h3>
+                <p>Mutation changes items in list. Cannot change in a string, <br>
+                List [ ] = [   ]  </p>
+                <p> Aliasing :  different names but equivalent <br>  
+                  Assignment statement, when giving a value to a varible <br>
+                  Lists do not need return as when change in function, it stays
+                <h3>List operations</h3>
+                <ul>
+                    <li> List .append . element</li>  
+                     <li>list . append (new element) </li>
+                     <li> List + list</li>
+                     <li> len( list)</li>
+                </ul>
+                    <p>append to  list adds the append items to the last index.  <br> adding lists , just adds the lists together</p>
+                    <p> += adds right and left, the puts result in left</p>
+                  <h3>For loop : go through each element </h3>
+                    <p>For name in list :  <br>   
+                      Similar for while loop but for lists <br>
+                    List .index (value)  to find value in list, if not in list error  </p>
+                    <p> Value in list.   True or false </p>
+      </div>
+    </div>
+  </div>
+<div class="col-6">     
+  <div class="lesson-notes">
+      <div class="lesson-title">
+          <h2> lesson 2.7  How to solve Problems</h2>
+      </div>
+      <div>        
+                <ul>
+                    <li> Dont panic</li>  
+                     <li> what are i/p  </li>
+                     <li> what are o/p </li>
+                     <li>  work through some examples by hand</li>
+                     <li>  simple mechanical solution. </li>
+                     <li>  Develop incrementally and test as we go </li>
+                     <li>  small steps and know what they do </li>
+                </ul>.            
+      </div>
+          
+    </div>
+</div>
+</div>
+<div class="row">
+ <div class="col-6">
+<div class="lesson-notes">
+      <div class="lesson-title">
+          <h2> 3.1-.2 introduction to abstraction  and Use functions</h2>
+      </div>
+      <div>
+       <h3> OOP object oriented programming </h3>
+       <h4>OOP is a design philosophy, everything in OOP is grouped as self sustainable objects</h4>
+
+          Where common properties and methods are grouped into a class. Then we can  use the class (Blueprint) to create different 
+          objects or instances.<br>
+          <br>
+           e.g. class could be vehicle , and subclasses could be  Car, truck , bus. and objects or instances = bmw and mini
+           <br>
+           classes defines  attributes (data) and behaviour  (actions) <br> similar to CSS class property : value.
+           <br>
+           attributes can be called properties and  behaviour called methods
+           <p>
+           OOP is where the  code is split apart into self contained class.  Almost like having smaller programs.  each object represents a different part of the application. each object has its own logic and data.
+           </p>
+           <p>  OOP allow projects to be divided into object based program development.This is especially useful for large projects with many programmers can focus on individual objects</p>
+           <p>
+             Objects can include new attributes and  behaviours which allows it to be extensible
+           </p>
+           <p>
+             OOP allows objects to be used many  times, hence reuseable.
+
+           </p>
+           <p>
+             Object Oriented Programming  enables
+             <ul>
+                <li>Modularity ; self contained</li>
+                <li>Extensibility; can be modified</li>
+                <li>Reusability;can be used many times </li>
+             </ul>
+
+             <p> Due to the above three factors, OOP has the follow five benefits</p>
+             <ol>
+                <li>easier to maintain code</li>
+                <li>increased productivity </li>
+                <li>faster to market</li>
+                <li>lower costs</li>
+                <li> more time to focus on quality of code</li>
+
+             </ol>
+           </p>
+            method  is like a function doing something. e.g. moving forward
+            <br>
+            module is a python file  which can contain many methods.we can import a module and use methods contained in the file.
+            <br>
+              <h3>OOP   analogy:</h3>
+                Learning Karate:  there are various movements; strikes,blocks and kicks. ,<br>
+
+                Kata, uses a set of movements. Theses movements come from Karate techniques. Karate= Clase and each kata is an object or instance.
+                there are more than 26 katas
+      </div>
+   </div>
+</div>
+<div class="col-6">
+<div class="lesson-notes">
+      <div class="lesson-title">
+          <h2> lesson 3.3a,b,c, Classes</h2>
+      </div>
+      <div>
+            <h3>3.3 a classes- Draw Turtles</h3>
+              Class  is like a blue print,  instances  or object uses some of the  blue print parameters <br>
+              When calling a class, we are calling the initialization  init function. Which allocated space in memory to use some of the class parameters ,<br>
+              Turtle is a file and within this file is the turtle class.
+              <h3>3.3b  Classes- Send Text </h3>
+              Importing file called twilio 
+              <br>
+              From twilio.rest import  twilioRestClient
+              File twilio.rest  call class twilioRestClient. 
+              <br>
+              client= twilioRestClient ()
+              Client is an instance or object
+              <br>
+              Can have many instances  of a class.
+              <h3>3.3c  Classes  Profanity Editor</h3>
+              Open function in standard library and not in a deeper file. Buil-in function 
+              <br>
+              Open is class
+              <br>
+              Urllib is a file in standard library , urlopen is a function inside
+              <p>
+                Python standard library  is very extensive,containing built-in  modules. Details can be found within Python documentation on the web.
+              </p>
+              <br>
+              We created objects of : turtle , open , urlopen 
+              They are classes
+      </div>
+   </div>
+  </div>
+</div>
+<div class="row">
+ <div class="col-6">
+  <div class="lesson-notes">
+      <div class="lesson-title">
+          <h2> lesson 3.4a,b making Classes</h2>
+      </div>
+      <div>        
+            <h3>3.4a.Make Classes Move website </h3>
+              <b>Creating a class</b> <br>
+             <p> class will have things to remember (data)and things to do. (Method ) <br> </p>
+
+                class Movie ( )  : Recommend caps for first letter.  From  Google  style guide  <br>
+                Each movie will be an instance 
+                  <br><br>
+                Create a class in one file. Then open another file to  create an instance and import Class information
+                <br><br>
+              Toy = media.Movie()
+              Ini. initiate  Is also called <b>constructor</b> 
+              <br>
+              def __ init__( self
+              Make sure def does not touch underscore <br><br>
+           <ul>
+               <li> 
+                 Self  becomes the name of the instance 
+                </li> 
+                <li> 
+                 Instance variables  when a variable  created in an instance  
+                 </li>
+                <li>
+                  When running  instance  it will need data to feed the init function in class. 
+                </li> 
+                <li>
+                   Instance method. Is  when a method is called from a class. 
+                </li> 
+
+            </ul>
+
+              <h3>3.4b Make Classes Advance </h3> 
+                Class variable, defined  before init.
+                 Shared by all objects.
+                Style should be all caps <br> <br>
+                There are  pre defined  variable eg  __doc__ <br>
+                <br>
+
+                Inheritance uses existing code. it is when an object or class is based on another object or class <br>
+                Keep class and instance in different files but in same folder  <br>
+                To use class parent, class Child ( Parent):
+                Parent . Init   Then add extra variable  <br> <br>
+               <b> Fish = class. Salmon = object</b> <br> 
+                Method created in parent class can be called in child parent. <br>
+                Method overriding is when methods have same name in both parent and child; When calling method in child,the parent method is override. <br>
+                similar to CSS when style can be added to all HTML, but a specific  part can be overwritten.
+      </div>
+     </div>
+
+    </div>
+  
+
+ <div class="col-6">
+  <div class="lesson-notes">
+      <div class="lesson-title">
+          <h2> lesson 4.1 Introduction to Networks </h2>
+      </div>
+      <div>        
+            <p>Network  is group of entities that  can communicate, even though they are not directly connected</p>
+             At least 3 entities with one not directly linked.
+            What do we need to make a network work?
+            <ul>
+              <li>Encode</li>
+              <li>message</li>
+              <li>decode</li>
+            </ul>
+
+              Routing is  where the traffic should go and how to direct it. 
+              Generally next hop is evaluated 
+              <br>
+              Who can use network , rules  which traffic takes priority
+               note :Internet best effort 
+
+      </div>
+     </div>
+
+    </div>
+  </div>
+
+<div class="row">
+ <div class="col-6">
+  <div class="lesson-notes">
+      <div class="lesson-title">
+          <h2> lesson 4.2 Making the internet work for you</h2>
+      </div>
+      <div>        
+           <p> Latency is the time taken from source to destination, Millisecond. </p>
+             Walking on an empty road has a high latency than a car travelling at 70mph on the same road . </br>
+             Bandwidth bits per second. Mbps  amount of information that can be transmitted per unit of time. 
+             Eg 6 lane motorway has bigger b/w than 3 lane. </br>
+             Once a link to source and destination has been established, how much information can travel per unit of time.</br>
+            <p>Bit  is 0 or 1  can be any up or down state. </br>
+             4 options needs only 2 bits : try to ask questions when 50% chance
+             Every extra bit double the  about of information that can be sent. </p>
+            Protocol   Is the language so that source and destination understand each other. </br></br>
+             <b>Http. Hypertext transfer protocol. Language of the web</b> </br> </br>
+            Client eg when using web browser sends a message GET to a servers to get a web page. </br>
+             Server will find web app , then. Server sends response . Server is specified by the url uniform resource locator .</br> </br>
+            http:// bbc.com/ test.   Http= protocol,  bbc.com is the server , / test. Webpage request = bbc.com /test </br>
+            <p>Head section, doc type, title css, js </br>
+            <b>Url  uniform resource locator.</b> </br> Protocol, host 
+             Query parameters ? P= 1 more queries separated by and </br>Extra information </br> Name= value </br>
+             Caching : stores data for quick retrieval </br>
+            Fragment #. Not sent to server , query sent to server
+            Port :  make internet connection need host name and port. Default 80 </br>
+            Http :  request line, GET.  / foo http :   Method, path , version </p>
+            <b>Main Method s GET and POST.</b>
+             already connected to host , so not in request line.</br>
+            The path is relative to the host, relative path not absolute path. Absolute path would have complete path. </br>
+            Headers sent with request line </br>
+            Host name needed as web server  could have many websites.</br>
+            User agent who is requesting. Good way to identify yourself  being courteous
+            No space in name and needs : </br>
+            User sends request to server. Then server responds
+            Status line. Http/1.1. 
+            <ul>
+               <li>Status code 200 ok</li>  
+               <li>302 forward,</li> 
+               <li>404 unknown</li> 
+               <li>500 server broken</li> 
+            </ul>
+
+            Then headers,   Dates, server ( but giving infor to hacker), content -type, content - length( not needed)
+            <h4>Servers</h4>
+            Http user talks to server. Response can be static or dynamic.</br> Static is picture and old web sites prewriten
+            Dynamic by programs called web applications ,on the fly. </br>
+            Web application lives on the server, talks http and generates content that the browser requests.
+
+      </div>
+     </div>
+
+    </div>
+  
+
+ <div class="col-6">
+  <div class="lesson-notes">
+      <div class="lesson-title">
+          <h2> lesson 4.3 forms </h2>
+      </div>
+      <div>        
+            <p>Forms used for users to enter data </p>
+              Form tags ,  in-between add input tag.
+              In input tag add name = </br>
+              Eg name = q then when adding text , then q= text. The query
+              New attribute  in input tag,  type= submit gives a button
+             New attribute in form,  called action. Action = url, to send the request.
+             Space = + </br>
+             Attribute for input type= text, type= password. Type= checkbox , radio but need to make names the same,</br>
+            need value parameter as radio button only one can be on. </br>
+            Add label tag to put a name on button.
+             Drop down
+             Select tags have a name attribute= q </br>
+             Option tags add value attribute to send to server
+             Text in between option tags is what is seen in the drop down
+             Password not sent secure.
+             Checkbox and name attribute 
+             <h4>Add web page to server, google app eng </h4> 
+             <ul>
+                <li>Create folder,with html and jaml files</li>
+                <li>Create a project id</li>
+                <li>copy id then add to jaml file to application</li>
+                <li>Shortcut  : google app eng launcher, file, create  new application.</li>
+              </ul>
+             
+
+
+      </div>
+     </div>
+
+    </div>
+  </div>
+
+<div class="row">
+ <div class="col-6">
+  <div class="lesson-notes">
+      <div class="lesson-title">
+          <h2> lesson 4.4 modulus and dictionaires </h2>
+      </div>
+      <div>        
+          <p>Modulus operator  is the percent sign and calculates  the  remainder. </p> </br>
+            Number percent modulus.   14 per 12 = 2 </br>
+            Dictionaries  has a key and value.  List  key is the position number. </br> So when you have say the 30th input  a name 'key'  is easier to remember or find.</br>
+            Not in order, list in order.
+            Note can have nested dictionary.
+             {}.  Can edit  like list. String cannot be modify , immutable . 
+
+
+      </div>
+     </div>
+
+    </div>
+  
+
+ <div class="col-6">
+  <div class="lesson-notes">
+      <div class="lesson-title">
+          <h2> lesson 4.5 Working with App eng </h2>
+      </div>
+      <div>        
+          <p>  Class main page 
+          Function  response with header and  output 
+          App=.   Looks at where the request will be directed in the file (routing)
+         / testform. Seems like a key and value </br></p>
+          In form tag method attribute can be post. But function should be changed to post
+          GET  parameters in url, used for fetching docs, max url <length , ok to cache, should be same server, just a link. </br>
+         POST  parameters in body after header, used for updating data, no max length , not ok to cache, ok to change server. Need form
+
+
+      </div>
+     </div>
+
+    </div>
+  </div>
+  <div class="row">
+ <div class="col-6">
+  <div class="lesson-notes">
+      <div class="lesson-title">
+          <h2> lesson 4.6 Validation</h2>
+      </div>
+      <div>        
+           <p> Validation, on server side that input is what was expected.
+            Server can receive  junk. </br>
+            If using drop downs , still need to verify data and advise user of any errors </br>
+            If checking numbers, check input isdigit and convert to int </br> </p>
+            User   Sends a  GET form, server sends form data, user sents POST form , server sends  good or bad message
+            <h4>Validation : </h4>
+            Verify input, on error render form again, include error message </br>
+            string substitution = percent s  
+            Html escaping to stop user input using html. </br>
+           &lt; &gt;Quote  &quot;  and  &amp;. Used for substitution  for html .
+           <pre>
+           Def  escape(s)
+             Use.   for ( i, o ) in (( "&", "& amp ;") :
+              s = s.replace (i,o)
+            return s
+           </pre>
+           Or use import cgi    ,cgi .escape ( s. quote =True ) built in python </br>
+           This stops user added HTML to post which could corrupt code </br>
+           Redirection when successful redirect to another server so reloading page does not resubmit  and have a distinct pages for forms and success
+      </div>
+     </div>
+    </div>
+ <div class="col-6">
+  <div class="lesson-notes">
+      <div class="lesson-title">
+          <h2> lesson 4.7 HTML Templates </h2>
+      </div>
+      <div>        
+           <p> Templates reduces repetitive  HTML. Produce a base html file which will have code that will be used for all other HTML files</br>
+          </br>
+            <h3>Template library is a library to build complicated strings html</h3>
+             External  library in jaml , use library </br>
+             Import jinja2 in py file.  Jinja2 is a built in into Google app eng. jinja2 is a template library and is similar to other templating libraries. </br> </p>
+             Create html template with substitutes </br>
+             <b>Always used to escape html  input, Auto escape = true   And pipe vertical line safe, if html input ok</b>
+              Min code in template , Min html in code eg none
+             <h4>Template Inheritance </h4>
+              For example title and footer could be used again  and again. </br>
+              Temletaes reduces  repeatable code. When changing part of the base HTML code, changes will be replicated to all other child html files. </br>
+              Body will be unique but we can share title and footer. Unique area can be called  by  block content, then endblock </br>
+              On infant html call base html. 
+             <per>
+              { &#37; extends " base.html" &#37;}
+              { &#37; block content &#37;}
+              { &#37; endblock per &#37;}
+              </per>
+              <ul>
+                <li>Separate different types of code</li>
+                <li>Makes more readable code</li>
+                <li>More secure website</li>
+                <li>Html that is easier to modify</li>
+              </ul>
+               Jinja.pocoo.org for more information on templates </br>
+               if there are many divs with same structure, then can use a for loop. Add repeated elements 
+      </div>
+     </div>
+
+    </div>
+  </div>
+
+<div class="row">
+ <div class="col-6">
+  <div class="lesson-notes">
+      <div class="lesson-title">
+          <h2> lesson 4.8 Databases</h2>
+      </div>
+      <div>        
+            <h4>Database is used to store information from users</h4>
+              A program that stores and retrieve large amount of structured data </br>
+              Could also be the machine running the program and even a group of servers </br>
+              Relational Databases uses Tables,   
+              Every entry is a row </br>
+              Querying a database by writing python  code is difficult 
+              Error pron,Tedious and Slow </br>
+              Types of database </br>
+              Relational (SQL). MySQL Goole app engines data store , Dynamo
+             SQL structured query language
+             SELECT. *   From links WHERE ID=5 </br>
+             <ul>
+                <li>Import module ndb</li>
+                <li>Create class with attributes</li>
+                <li>Read documentation on module</li>
+                <li>Create a few objects ( entity)  for a test</li>
+                <li>.put adds to database </li>
+                <li>Import time , time.sleep(.1). Time to sync </li>
+                <li>Query data eg   Query = picture.query( ) order ( picture.date)</li>
+                <li>.fetch    ( fetch data) eg  picture _list= query.fetch(5)</li>
+              </ul>
+             Print  picture_list [0]   Will print first attribute in the class </br>
+             Len gives the amount of entities (objects)
+             Can use for picture in query : </br>
+            Print picture  . attribute </br>
+            Render_html = Html % ( position1, position 2). Replaces %s in html 
+            Self.response.out.write ( render_html)
+
+
+      </div>
+     </div>
+
+    </div>
+  
+
+ <div class="col-6">
+  <div class="lesson-notes">
+      <div class="lesson-title">
+          <h2> lesson Webcasts </h2>
+      </div>
+      <div>        
+            
+      </div>
+     </div>
+
+    </div>
+  </div>
+<a href="http://jigsaw.w3.org/css-validator/check/referer">
+    <img style="border:0;width:88px;height:31px"
+        src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+        alt="Valid CSS!" />
+    </a>
+
+
+{% endblock %}
+
+ 
+    
+    
+    
+    
+  
