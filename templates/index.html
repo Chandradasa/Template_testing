@@ -3,7 +3,12 @@
 {% block content %}
 
 
-<marquee> keep on learning  programming; when you hit a wall, take a break</marquee>
+{% for message in marque %}
+
+
+<marquee>  {{ marque }}  </marquee>
+
+{% endfor %}
 
 <a href="comments.html"> add comments</a>
 <a href="/MainPage"> test connection</a>
@@ -544,7 +549,7 @@
           <h2> lesson 4.2 Making the internet work for you</h2>
       </div>
       <div>        
-           <p> Latency is the time taken from source to destination, Millisecond. </p>
+           <p> Latency is the time taken from source to destination, measured in  Millisecond. </p>
              Walking on an empty road has a high latency than a car travelling at 70mph on the same road . </br>
              Bandwidth bits per second. Mbps  amount of information that can be transmitted per unit of time. 
              Eg 6 lane motorway has bigger b/w than 3 lane. </br>
@@ -555,22 +560,23 @@
             Protocol   Is the language so that source and destination understand each other. </br></br>
              <b>Http. Hypertext transfer protocol. Language of the web</b> </br> </br>
             Client eg when using web browser sends a message GET to a servers to get a web page. </br>
-             Server will find web app , then. Server sends response . Server is specified by the url uniform resource locator .</br> </br>
-            http:// bbc.com/ test.   Http= protocol,  bbc.com is the server , / test. Webpage request = bbc.com /test </br>
+             Server will find web app , then server sends response . Server is specified by the url uniform resource locator .</br> </br>
+             <h4>example</h4>
+            http:// bbc.com/ test.   Http= protocol,  bbc.com is the server(host), / test = path. Webpage request = bbc.com /test </br>
             <p>Head section, doc type, title css, js </br>
             <b>Url  uniform resource locator.</b> </br> Protocol, host 
-             Query parameters ? P= 1 more queries separated by and </br>Extra information </br> Name= value </br>
+             Query parameters ? P= 1 more queries separated by &amp; </br>Extra information </br> Name= value </br>
              Caching : stores data for quick retrieval </br>
             Fragment #. Not sent to server , query sent to server
             Port :  make internet connection need host name and port. Default 80 </br>
-            Http :  request line, GET.  / foo http :   Method, path , version </p>
+            Http :  request line, GET.  / foo, http 1.1 :   Method, path , version </p>
             <b>Main Method s GET and POST.</b>
              already connected to host , so not in request line.</br>
             The path is relative to the host, relative path not absolute path. Absolute path would have complete path. </br>
             Headers sent with request line </br>
             Host name needed as web server  could have many websites.</br>
             User agent who is requesting. Good way to identify yourself  being courteous
-            No space in name and needs : </br>
+            No space in name and needs a   ":" </br>
             User sends request to server. Then server responds
             Status line. Http/1.1. 
             <ul>
@@ -598,22 +604,61 @@
           <h2> lesson 4.3 forms </h2>
       </div>
       <div>        
-            <p>Forms used for users to enter data </p>
-              Form tags ,  in-between add input tag.
-              In input tag add name = </br>
-              Eg name = q then when adding text , then q= text. The query
-              New attribute  in input tag,  type= submit gives a button
-             New attribute in form,  called action. Action = url, to send the request.
-             Space = + </br>
-             Attribute for input type= text, type= password. Type= checkbox , radio but need to make names the same,</br>
-            need value parameter as radio button only one can be on. </br>
-            Add label tag to put a name on button.
+            <p>Forms  are used for users to enter information </p>
+              Form tags &lt; form &gt;then can add input tag.</br>
+              Within input tag add name = </br>
+              &lt;form> </br>
+              &lt;input name ="q" > </br>
+               &lt;input type =" submit" > </br>&lt;/form>
+              <form>
+                 <input  name= "q">
+                 <input type ="submit" name= "q">
+              </form>   </br>
+              Eg name = q then when adding text , then q= text within the url. </br>
+              the query section is after the ? in url </br>
+              New attribute  in input tag,  type= submit gives a button</br>
+              <p>New attribute in form,  called action. Action = url, to send the request to.</br>
+             &lt;form action = "http://google.com/search" &gt; </br>
+             Space in text request  = + </br>
+             Attribute for input type= text, type= password. Type= checkbox (with different "names"), radio but need to make names the same,</br>
+            need value parameter as for radio button, only one can be on. </br> </p>
+            Add label tag to put a name on button. </br>
+            <form>
+               <label>
+                 one
+                 <input type="radio" name="q" value="one">
+               </label>
+               <label>
+                 two
+                 <input type="radio" name="q" value="two">
+               </label>
+               <label>
+                 three
+                 <input type="radio" name="q" value="three">
+               </label>
+            </form>
              Drop down
-             Select tags have a name attribute= q </br>
-             Option tags add value attribute to send to server
-             Text in between option tags is what is seen in the drop down
-             Password not sent secure.
-             Checkbox and name attribute 
+             Select tags have a name attribute= q &lt;select name="q" &gt; </br>
+              &lt;option&gt;one&lt;/option&gt;</br>
+              &lt;option&gt;two&lt;/option&gt;</br>
+              &lt;option&gt;three&lt;/option&gt;</br>
+             &lt;select&gt; </br>
+             <form>
+               <select name="q">
+                <option> one </option>
+                <option> two </option>
+                <option> three </option>
+               </select> 
+               <br>
+               <input type="submit">
+             </form>  
+
+
+
+             in option tags add value attribute to send to server.
+             Text in between option tags is what is seen in the drop down<br>
+              note Password not sent secure.
+            
              <h4>Add web page to server, google app eng </h4> 
              <ul>
                 <li>Create folder,with html and jaml files</li>
@@ -637,12 +682,16 @@
           <h2> lesson 4.4 modulus and dictionaires </h2>
       </div>
       <div>        
-          <p>Modulus operator  is the percent sign and calculates  the  remainder. </p> </br>
-            Number percent modulus.   14 per 12 = 2 </br>
-            Dictionaries  has a key and value.  List  key is the position number. </br> So when you have say the 30th input  a name 'key'  is easier to remember or find.</br>
-            Not in order, list in order.
+          <p>Modulus operator  is the &#37; sign and calculates  the  remainder. </p> </br>
+            &lt;Number&gt;  &#37; modulus = remainder   14 &#37;12 = 2 </br><br>
+            Dictionaries  has a key and value.  List has values in the position number. </br> So when you have say the 30th input  a name 'key'  is easier to remember or find.</br>
+            Not in order, list is in order.
             Note can have nested dictionary.
-             {}.  Can edit  like list. String cannot be modify , immutable . 
+            {}. <br>
+            Can edit  like list. String cannot be modify , immutable . <br><br>
+            To add  new key/value = (name of dictionary)dict ["new  key"]=  "new value" 
+
+
 
 
       </div>
@@ -656,13 +705,29 @@
       <div class="lesson-title">
           <h2> lesson 4.5 Working with App eng </h2>
       </div>
-      <div>        
-          <p>  Class main page 
-          Function  response with header and  output 
-          App=.   Looks at where the request will be directed in the file (routing)
-         / testform. Seems like a key and value </br></p>
-          In form tag method attribute can be post. But function should be changed to post
-          GET  parameters in url, used for fetching docs, max url <length , ok to cache, should be same server, just a link. </br>
+      <div>  
+        <p> app.Jaml file  tell  GAE which python file to use. Also any static files , like css. Libaries are also called hear
+        </p>
+        <p> In the python file at the bottom  part of code, directs to what handler to use when end users request</p>
+
+        <pre>
+          app = webapp2.WSGIApplication([
+          ('/',CourseNotes),('/comments.html',Comments),('/MainPage',MainPage),
+           ('/sign', PostWall),('/testing_forloops',Testing)]       , debug=True)
+
+        </pre>
+
+        when end user requests a page  it needs to equal one of the first items in the brackets (). then the second item will direct to  part of code needed. first item maps to second item in the bracket. The second item maps to relavent part of code. The second items in the  () is call a handler.
+
+          <p>   Looks at where the request will be directed in the file (routing).
+
+         </br></p>
+          In form tag method attribute can be post.<br>
+          the code below can be used to look at header requests <br>
+          self.response.headers['contemt-type'] ='text/plain'<br>
+          self.response.write(self.request)<br>
+           But function should be changed to post
+          GET  parameters in url, used for fetching docs, max url length , ok to cache, should be same server, just a link. </br>
          POST  parameters in body after header, used for updating data, no max length , not ok to cache, ok to change server. Need form
 
 
@@ -682,20 +747,47 @@
             Server can receive  junk. </br>
             If using drop downs , still need to verify data and advise user of any errors </br>
             If checking numbers, check input isdigit and convert to int </br> </p>
-            User   Sends a  GET form, server sends form data, user sents POST form , server sends  good or bad message
+            User   Sends a  GET form, server sends form data, user sents POST form , server sends  good or bad message<br>
+            get function sends the form to end user. <br>
+            post function  accepts user input
             <h4>Validation : </h4>
-            Verify input, on error render form again, include error message </br>
-            string substitution = percent s  
+            Verify input, if error, render form again, include error message </br>
+            if form has a post method,  need def post (self) function<br>
+            string substitution = &#37;s<br>
+            given_string=" i think  &#37; and &#37; are thing to do"
+            <pre>
+              def sub (s1,s2):
+                return given _string % (s1,s2)
+
+              print sub ("run","sleep")  
+
+            </pre>
+           <p> i think  <b>run</b> and  <b>sleep</b> are thing to do</p>
+
+           can used a dictonary to substitute named vales <br>
+           given_string=" i think  &#37;(run) and &#37;(sleep) are thing to do
+           <pre>
+           def sub (run,sleep)
+              return given _string&#37;{ "run":run,"sleep":sleep }
+           print sub ("talk","walk")
+           </pre>
+           <p>i think  <b>talk</b> and <b>walk</b> are thing to do</p>
             Html escaping to stop user input using html. </br>
-           &lt; &gt;Quote  &quot;  and  &amp;. Used for substitution  for html .
+           escape characters substitute for html .<br> Can search for escape characters HTML for full list
+           <a href="http://www.theukwebdesigncompany.com/articles/entity-escape-characters.php?PHPSESSID=8cbbddde9a9c9825467546f1c98fe119"> html escape characters </a>
+
            <pre>
            Def  escape(s)
              Use.   for ( i, o ) in (( "&", "& amp ;") :
               s = s.replace (i,o)
             return s
            </pre>
-           Or use import cgi    ,cgi .escape ( s. quote =True ) built in python </br>
-           This stops user added HTML to post which could corrupt code </br>
+           Easier way is to  use import cgi    ,cgi .escape ( s. quote =True ) built in python </br>
+           This stops user added HTML to post which <b>could corrupt code</b> </br>
+           Jinja 2  has auto escape function as well<br>
+           <p>template_dir = os.path.join(os.path.dirname(__file__), 'templates')
+           jinja_env =jinja2.Environment(loader = jinja2.FileSystemLoader(template_dir ), autoescape =True)</p>
+           autoescape=True is the Jinja2 html autoescape <br><br>
            Redirection when successful redirect to another server so reloading page does not resubmit  and have a distinct pages for forms and success
       </div>
      </div>

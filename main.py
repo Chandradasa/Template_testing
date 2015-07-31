@@ -83,10 +83,10 @@ class CourseNotes(Handler):
 ]
          notes = [["Lesson 1.1: The Basics of the Web and HTML","lesson_1.1"]]
 
+         marque= ["keep on learning  programming; when you hit a wall, take a break", "always come back"]
 
 
-
-         self.render('index.html',notes= notes )  
+         self.render('index.html',notes= notes ,marque=marque)  
         
 class Testing(Handler):
       def get (self):
