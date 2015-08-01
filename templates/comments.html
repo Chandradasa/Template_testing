@@ -1,58 +1,30 @@
-
  {% extends "base.html" %}
-
-{% block content %}
-
-
-
-<h3 class= "lesson-notes">Please add comments below. You can login or add comments as a guest</h3>
-
-<a href="/"> back to notes</a>
-<br><br>
-
- <h3 class="error"> {{ error }} </h3> 
-
-  <form action="/sign?{{ sign_query_params }} " method="post">
+  {% block content %}
+ <h3 class= "lesson-notes">Please add comments below. You can login (Google account) or add comments as a guest</h3>
+   <a href="/"> back to notes</a><br><br>
+    <h3 class="error"> {{ error }} </h3> 
+<form action="/sign?{{ sign_query_params }} " method="post">
     <div><textarea name="content" rows="3" cols="60"></textarea></div>
     <div><input type="submit" value="Post Comment"></div>
-  </form>
-  <hr>
-  <form>Wall:
+</form><br>
+<form>Wall:
     <input value= "{{ wall_name }}" name="wall_name">
     <input type="submit" value="Switch">
-  </form>
+</form>
   <br>
   Logged in as: <strong>{{ user_name}}</strong><br>
   <a href="{{ url }}">{{ url_linktext }}</a>
   <!-- user comments start here -->
-
->
-
-   {% for post in posts %}
-
-
-
+{% for post in posts %}
   {% if user and user.user_id() == post.author.identity %}
-
    <div class= "lesson-notes">
        <div><h3 class= "lesson-notes">You   {{ post.author.name }} </h3> </div>
           {% else  %}
        <div><h3> {{post.author.name }} </h3>
        </div>
-
-    wrote: <blockquote> <h3 class= "lesson-notes">{{ post.content }}</blockquote> </h3>
+   wrote: <blockquote> <h3 class= "lesson-notes">{{ post.content }}</blockquote> </h3>
     {{ post.date }}
     </div>
-
-
-
-{% endif %}
-
-
-
-
+   {% endif %}
  {% endfor %}
-
-
-
 {% endblock %} 

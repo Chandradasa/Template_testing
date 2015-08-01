@@ -29,23 +29,6 @@ template_dir = os.path.join(os.path.dirname(__file__), 'templates')
 # jinja will load using temaplates located in current dir
 jinja_env =jinja2.Environment(loader = jinja2.FileSystemLoader(template_dir ), autoescape =True)
 
-#form_html= """ testing jinja2"""
-# autoescape escape html
-
-
-# # below class testing datastore
-# class Picture(ndb.Model):
-#     link = ndb.StringProperty()
-#     comment = ndb.StringProperty()
-#     date = ndb.DateTimeProperty(auto_now_add=True)
-
-
-# pic = Picture(comment= "this is my first data store")
-
-# pic.put()
-
-
-
 class Handler(webapp2.RequestHandler):
     # to be used by other functions  to output to web
     def write(self, *a,**kw):
@@ -58,76 +41,15 @@ class Handler(webapp2.RequestHandler):
     def render (self, template, **kw):
         self.write(self.render_str(template,**kw))
 
-
-# class MainHandler(Handler):
-#     def get (self):
-#         items=self.request.get_all('food')
-#         self.render ('shopping_list.html', items =items)
-
-# class FizzBuzzHandler(Handler):
-#       def get (self):
-#          n =self.request.get('n',0)
-#          n = n and  int(n)
-#          self.render('fizzbuzz.html',n = n )
-
 class CourseNotes(Handler):
-      def get (self):
-         concepts= [ "Lesson 1.1: The Basics of the Web and HTML",
-
-         " Creating a Structured Document",
-         "lesson 1.3:  adding CSS Style and HTML Structure","lesson 2.1  Introduction to serious programming",
-         "lesson 2.2 variable and strings","lesson 2.3 input function output","lesson 2.4 Control flow: Loops if and while" 
-         ,"lesson 2.5   Debugging","lesson 2.6  Structured Data: Lists and foor loops","lesson 2.7  How to solve Problems",
-         "3.1-.2 introduction to abstraction  and Use functions"," lesson 3.3a,b,c, Classes","lesson 3.4a,b making Classes",
-          
-]
-         notes = [["Lesson 1.1: The Basics of the Web and HTML","lesson_1.1"]]
-
-         marque= ["keep on learning  programming; when you hit a wall, take a break", "always come back"]
-
-
-         self.render('index.html',notes= notes ,marque=marque)  
-        
-class Testing(Handler):
-      def get (self):
-         names=["dave", "john","tony"]
-         some_dic={"son": "dave","age": 51}
-         self.render('testing_forloops.html',names= names, **some_dic )  
-
-    # def get(self):
-     #   self.write(form_html)
+      def get (self):       
+         self.render('index.html')  
 
 class Comments(Handler):
-      def get (self):
-         
+      def get (self):     
          self.render('comments.html')  
 
 
-# We're going to use string substitution to render our HTML
-# HTML_TEMPLATE = """<!DOCTYPE html>
-# <head>
-#   <meta charset="utf-8">
-#   <title>Wall Book Example</title>
-# </head>
-# <body>
-# <a href="/"> back to notes</a>
-#   <form action="/sign?%s" method="post">
-#     <div><textarea name="content" rows="3" cols="60"></textarea></div>
-#     <div><input type="submit" value="Post Comment"></div>
-#   </form>
-#   <hr>
-#   <form>Wall:
-#     <input value="%s" name="wall_name">
-#     <input type="submit" value="Switch">
-#   </form>
-#   <br>
-#   Logged in as: <strong>%s</strong><br>
-#   <a href="%s">%s</a>
-#   <!-- user comments start here -->
-#   %s
-# </body>
-# </html>
-# """
 
 DEFAULT_WALL = 'Public'
 
@@ -190,32 +112,14 @@ class MainPage(Handler):
         url_linktext = 'Login'
         user_name = 'Anonymous Poster'
 
-    # Create our posts html
-    # posts_html = ''
-    # for post in posts:
-
-    #   # Check if the current signed in user matches with the author's identity from this particular
-    #   # post. Newline character '\n' tells the computer to print a newline when the browser is
-    #   # is rendering our HTML
-    #   if user and user.user_id() == post.author.identity:
-    #     posts_html += '<div><h3>(You) ' + post.author.name + '</h3>\n'
-    #   else:
-    #     posts_html += '<div><h3>' + post.author.name + '</h3>\n'
-
-    #   posts_html += 'wrote: <blockquote>'+ cgi.escape(post.content) + '</blockquote>\n'
-    #   posts_html += '</div>\n'
-
+    
     error = self.request.get('error')
-# cgi.escape(post.content)
+
     sign_query_params = urllib.urlencode({'wall_name': wall_name})
 
-    # Render our page
-   # rendered_HTML = HTML_TEMPLATE % (sign_query_params, cgi.escape(wall_name), user_name,
-                     #             url, url_linktext, posts_html)
     posts_html=" " 
     rendered_HTML =  {"sign_query_params" : sign_query_params, "wall_name" : wall_name, "user_name" :user_name,
                                    "url":url, "url_linktext": url_linktext, "posts": posts,"error":error }
-
 
     # Write Out Page here
     #self.response.out.write(rendered_HTML)
@@ -264,7 +168,7 @@ class PostWall(Handler):
 
 app = webapp2.WSGIApplication([
 ('/',CourseNotes),('/comments.html',Comments),('/MainPage',MainPage),
-('/sign', PostWall),('/testing_forloops',Testing)
+('/sign', PostWall)
  
 
 ], debug=True)

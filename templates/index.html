@@ -1,50 +1,14 @@
 {% extends "base.html" %}
-
 {% block content %}
-
-
-{% for message in marque %}
-
-
-<marquee>  {{ marque }}  </marquee>
-
-{% endfor %}
-
-<a href="comments.html"> add comments</a>
-<a href="/MainPage"> test connection</a>
-<br><br>
-
-{% for note in notes %}
-
-    <div class="col-6">
-        <div class = "lesson-notes">
-         <div class="lesson-title">
-          <h2> {{  notes [0] [1] }}</h2>
-
-         {{  notes [0][0]  }} 
-          
-              
-
-
-         </div>
-        </div>
-    </div>
-
-    {% endfor %}
-
-
+<a href="/MainPage"> click hear to add comments</a><br><br>
   <h1 class="title"> Intro to programming</h1>
-
-
     <div class="row">
       <div class="col-6">
         <div class = "lesson-notes">
         <div class="lesson-title">
           <h2> Lesson 1.1: The Basics of the Web and HTML</h2>
            </div>
-          <div class = "lesson 1.1">
-        
-         lesson_1.1 = """ 
+          <div class = "lesson 1.1">     
           <h4>New start</h4>
           <p> HTML hyper text markup language , is the main part of the web</p>
           <p> HTTP is the language to comms with servers</p>
@@ -59,7 +23,7 @@
           <p> to add a link use a tag anchor and href = web link<a href= "http://www.bbc.com"> The BBC</a></p>
           <p> to add image use img tag wih attribute src(source)
           </p>
-          inline tags do not have space eg padding. block tags eg div is a block has invisable box 
+          inline tags do not have space eg padding. block tags eg div is a block has invisible box 
           Span inline can add style. 
           """
           </div>
@@ -80,7 +44,7 @@
              </ul>
              <p> Web pages  can be divided into <b>boxes</b> using div tags </p>
              <p> CSS can be inline, in head section or external</p>
-             <p> clase atribute can be used  to add style. Id used for one section</p>
+             <p> class attribute can be used  to add style. Id used for one section</p>
              <p> programmers need to avoid repeat code as it takes more time;more chance of errors. do no repeat code; can used style calling class on multiple areas of the web site</p>
              <p> computer codes being structured, improves clarity,quality and development time.Logical flow</p>
     </div>
@@ -217,17 +181,18 @@
               <p>Once a function  is created , it can be used <br>
               Inputs entered into function and output occurs</p>
                 <b>Example </b>
-             <ul> 
-                <li>  def sum (a,b) </li>
-                <li> a= a+b </li>
-                <li>  return a</li>
-             </ul>              
-                <p>Procedural compersion </p> <br>
-                  def square (n):  note : <br>
-                    return n*n <br>
-
-                      x=37 <br>
-                <p>  print square(square(x)) </p>                      
+            <pre>
+                 def sum (a,b) 
+                    a= a+b 
+                 return a
+             </pre>                   
+                <h4>Procedural comp  </h4>
+              <pre>   
+                  def square (n): 
+                    return n*n 
+                      x=37 
+                print square(square(x)) 
+              </pre>                      
     </div>
   </div>
  </div>
@@ -240,37 +205,29 @@
         <div>
        <h4>Comparison</h4>
              <p>Greater than and less than brackets are used<br>
-
              equal to  ==    
              not equal to!= </p>
-
              <p> = means assignment.
-
           If greater or less than (test expression) <br>
-
                     Block </p>
-
-            ==.   Returns true or false
-
-                OR can be used not  capital<br>
+            ==.   Returns true or false OR can be used not  capital<br>
                 <p> First expression then true , if first false then check second expression is checked. </p>
-
-                def bigger (a,b): <br>
-                    If a>b:<br>
-                      return a<br>
-                    else: <br>
-                        return <br>
-                def biggest (a,b,c): <br>
-                      return bigger ( bigger (a,b),c) <br>
-
+               <pre>
+                def bigger (a,b): 
+                    If a>b:
+                      return a
+                    else: 
+                        return 
+                def biggest (a,b,c): 
+                      return bigger ( bigger (a,b),c) 
+                </pre>
                   <p>Procedure within a procedure
-                  return.max(a,b,c) <p>
-
-                  <p>
+                  return.max(a,b,c) </p>
+                  
             Loop while   Continues until, test expression is false
             While (test expression):
             (block)
-            </p>
+            
       </div>
     </div>
   </div>
@@ -283,9 +240,9 @@
             <h4>All programs will have bugs at first, expect it.
             </h4>
 
-              <p>have a strategy to debug <br>
-              Error message in python is called traceback <br>
-              Can look up error message on the web. <br> Look at the last line in error message </p>
+              <p>have a strategy to debug 
+              Error message in python is called traceback 
+              Can look up error message on the web. Look at the last line in error message </p>
             <p>When using example code, try use the original code and make small changes </p>
             <p>Also check example code does what you want it to do 
             </p>
@@ -316,14 +273,14 @@
  <div class="col-6">
     <div class="lesson-notes">
       <div class="lesson-title">
-          <h2> lesson 2.6  Structured Data: Lists and foor loops</h2>
+          <h2> lesson 2.6  Structured Data: Lists and for loops</h2>
       </div>
         <div>
               <h3>Structured data </h3>
                 <p>Mutation changes items in list. Cannot change in a string, <br>
                 List [ ] = [   ]  </p>
                 <p> Aliasing :  different names but equivalent <br>  
-                  Assignment statement, when giving a value to a varible <br>
+                  Assignment statement, when giving a value to a variable <br>
                   Lists do not need return as when change in function, it stays
                 <h3>List operations</h3>
                 <ul>
@@ -346,10 +303,10 @@
   <div class="lesson-notes">
       <div class="lesson-title">
           <h2> lesson 2.7  How to solve Problems</h2>
-      </div>
-      <div>        
+      </div>     
+  <div>        
                 <ul>
-                    <li> Dont panic</li>  
+                    <li> Don't panic</li>  
                      <li> what are i/p  </li>
                      <li> what are o/p </li>
                      <li>  work through some examples by hand</li>
@@ -388,7 +345,7 @@
              Objects can include new attributes and  behaviours which allows it to be extensible
            </p>
            <p>
-             OOP allows objects to be used many  times, hence reuseable.
+             OOP allows objects to be used many  times, hence reusable.
 
            </p>
            <p>
@@ -396,7 +353,7 @@
              <ul>
                 <li>Modularity ; self contained</li>
                 <li>Extensibility; can be modified</li>
-                <li>Reusability;can be used many times </li>
+                <li>Reusability ; can be used many times </li>
              </ul>
 
              <p> Due to the above three factors, OOP has the follow five benefits</p>
@@ -408,7 +365,7 @@
                 <li> more time to focus on quality of code</li>
 
              </ol>
-           </p>
+           
             method  is like a function doing something. e.g. moving forward
             <br>
             module is a python file  which can contain many methods.we can import a module and use methods contained in the file.
@@ -416,7 +373,7 @@
               <h3>OOP   analogy:</h3>
                 Learning Karate:  there are various movements; strikes,blocks and kicks. ,<br>
 
-                Kata, uses a set of movements. Theses movements come from Karate techniques. Karate= Clase and each kata is an object or instance.
+                Kata, uses a set of movements. Theses movements come from Karate techniques. Karate= Class and each kata is an object or instance.
                 there are more than 26 katas
       </div>
    </div>
@@ -535,13 +492,10 @@
               <br>
               Who can use network , rules  which traffic takes priority
                note :Internet best effort 
-
       </div>
      </div>
-
     </div>
   </div>
-
 <div class="row">
  <div class="col-6">
   <div class="lesson-notes">
@@ -550,33 +504,33 @@
       </div>
       <div>        
            <p> Latency is the time taken from source to destination, measured in  Millisecond. </p>
-             Walking on an empty road has a high latency than a car travelling at 70mph on the same road . </br>
+             Walking on an empty road has a high latency than a car travelling at 70mph on the same road . <br>
              Bandwidth bits per second. Mbps  amount of information that can be transmitted per unit of time. 
-             Eg 6 lane motorway has bigger b/w than 3 lane. </br>
-             Once a link to source and destination has been established, how much information can travel per unit of time.</br>
-            <p>Bit  is 0 or 1  can be any up or down state. </br>
+             Eg 6 lane motorway has bigger b/w than 3 lane. <br>
+             Once a link to source and destination has been established, how much information can travel per unit of time.<br>
+            <p>Bit  is 0 or 1  can be any up or down state. <br>
              4 options needs only 2 bits : try to ask questions when 50% chance
              Every extra bit double the  about of information that can be sent. </p>
-            Protocol   Is the language so that source and destination understand each other. </br></br>
-             <b>Http. Hypertext transfer protocol. Language of the web</b> </br> </br>
-            Client eg when using web browser sends a message GET to a servers to get a web page. </br>
-             Server will find web app , then server sends response . Server is specified by the url uniform resource locator .</br> </br>
+            Protocol   Is the language so that source and destination understand each other. <br><br>
+             <b>Http. Hypertext transfer protocol. Language of the web</b> <br> <br>
+            Client eg when using web browser sends a message GET to a servers to get a web page. <br>
+             Server will find web app , then server sends response . Server is specified by the url uniform resource locator .<br> <br>
              <h4>example</h4>
-            http:// bbc.com/ test.   Http= protocol,  bbc.com is the server(host), / test = path. Webpage request = bbc.com /test </br>
-            <p>Head section, doc type, title css, js </br>
-            <b>Url  uniform resource locator.</b> </br> Protocol, host 
-             Query parameters ? P= 1 more queries separated by &amp; </br>Extra information </br> Name= value </br>
-             Caching : stores data for quick retrieval </br>
+            http:// bbc.com/ test.   Http= protocol,  bbc.com is the server(host), / test = path. Webpage request = bbc.com /test <br>
+            <p>Head section, doc type, title css, js <br>
+            <b>Url  uniform resource locator.</b> <br> Protocol, host 
+             Query parameters ? P= 1 more queries separated by &amp; <br>Extra information <br> Name= value <br>
+             Caching : stores data for quick retrieval <br>
             Fragment #. Not sent to server , query sent to server
-            Port :  make internet connection need host name and port. Default 80 </br>
+            Port :  make internet connection need host name and port. Default 80 <br>
             Http :  request line, GET.  / foo, http 1.1 :   Method, path , version </p>
             <b>Main Method s GET and POST.</b>
-             already connected to host , so not in request line.</br>
-            The path is relative to the host, relative path not absolute path. Absolute path would have complete path. </br>
-            Headers sent with request line </br>
-            Host name needed as web server  could have many websites.</br>
+             already connected to host , so not in request line.<br>
+            The path is relative to the host, relative path not absolute path. Absolute path would have complete path. <br>
+            Headers sent with request line <br>
+            Host name needed as web server  could have many websites.<br>
             User agent who is requesting. Good way to identify yourself  being courteous
-            No space in name and needs a   ":" </br>
+            No space in name and needs a   ":" <br>
             User sends request to server. Then server responds
             Status line. Http/1.1. 
             <ul>
@@ -586,17 +540,14 @@
                <li>500 server broken</li> 
             </ul>
 
-            Then headers,   Dates, server ( but giving infor to hacker), content -type, content - length( not needed)
+            Then headers,   Dates, server ( but giving information to hacker), content -type, content - length( not needed)
             <h4>Servers</h4>
-            Http user talks to server. Response can be static or dynamic.</br> Static is picture and old web sites prewriten
-            Dynamic by programs called web applications ,on the fly. </br>
+            Http user talks to server. Response can be static or dynamic.<br> Static is picture and old web sites rewrites 
+            Dynamic by programs called web applications ,on the fly. <br>
             Web application lives on the server, talks http and generates content that the browser requests.
-
       </div>
      </div>
-
     </div>
-  
 
  <div class="col-6">
   <div class="lesson-notes">
@@ -605,24 +556,25 @@
       </div>
       <div>        
             <p>Forms  are used for users to enter information </p>
-              Form tags &lt; form &gt;then can add input tag.</br>
-              Within input tag add name = </br>
-              &lt;form> </br>
-              &lt;input name ="q" > </br>
-               &lt;input type =" submit" > </br>&lt;/form>
+              Form tags &lt; form &gt;then can add input tag.<br>
+              Within input tag add name = <br>
+              &lt;form> <br>
+              &lt;input name ="q" > <br>
+               &lt;input type =" submit" > <br>&lt;/form>
               <form>
                  <input  name= "q">
                  <input type ="submit" name= "q">
-              </form>   </br>
-              Eg name = q then when adding text , then q= text within the url. </br>
-              the query section is after the ? in url </br>
-              New attribute  in input tag,  type= submit gives a button</br>
-              <p>New attribute in form,  called action. Action = url, to send the request to.</br>
-             &lt;form action = "http://google.com/search" &gt; </br>
-             Space in text request  = + </br>
-             Attribute for input type= text, type= password. Type= checkbox (with different "names"), radio but need to make names the same,</br>
-            need value parameter as for radio button, only one can be on. </br> </p>
-            Add label tag to put a name on button. </br>
+              </form>   <br>
+              Eg name = q then when adding text , then q= text within the url. <br>
+              the query section is after the ? in url <br>
+              New attribute  in input tag,  type= submit gives a button<br>
+              <p>New attribute in form,  called action. Action = url, to send the request to.<br>
+             &lt;form action = "http://google.com/search" &gt; <br>
+             Space in text request  = + <br>
+             Attribute for input type= text, type= password. Type= checkbox (with different "names"), radio but need to make names the same,<br>
+            need value parameter as for radio button, only one can be on. <br> </p>
+            type= hidden add inputs into url <br>
+            Add label tag to put a name on button. <br>
             <form>
                <label>
                  one
@@ -638,11 +590,11 @@
                </label>
             </form>
              Drop down
-             Select tags have a name attribute= q &lt;select name="q" &gt; </br>
-              &lt;option&gt;one&lt;/option&gt;</br>
-              &lt;option&gt;two&lt;/option&gt;</br>
-              &lt;option&gt;three&lt;/option&gt;</br>
-             &lt;select&gt; </br>
+             Select tags have a name attribute= q &lt;select name="q" &gt; <br>
+              &lt;option&gt;one&lt;/option&gt;<br>
+              &lt;option&gt;two&lt;/option&gt;<br>
+              &lt;option&gt;three&lt;/option&gt;<br>
+             &lt;select&gt; <br>
              <form>
                <select name="q">
                 <option> one </option>
@@ -652,88 +604,65 @@
                <br>
                <input type="submit">
              </form>  
-
-
-
              in option tags add value attribute to send to server.
              Text in between option tags is what is seen in the drop down<br>
               note Password not sent secure.
-            
              <h4>Add web page to server, google app eng </h4> 
              <ul>
                 <li>Create folder,with html and jaml files</li>
                 <li>Create a project id</li>
                 <li>copy id then add to jaml file to application</li>
                 <li>Shortcut  : google app eng launcher, file, create  new application.</li>
-              </ul>
-             
-
-
+              </ul>             
       </div>
      </div>
-
     </div>
-  </div>
+    </div>
 
 <div class="row">
  <div class="col-6">
   <div class="lesson-notes">
       <div class="lesson-title">
-          <h2> lesson 4.4 modulus and dictionaires </h2>
+          <h2> lesson 4.4 modulus and dictionaries  </h2>
       </div>
       <div>        
-          <p>Modulus operator  is the &#37; sign and calculates  the  remainder. </p> </br>
-            &lt;Number&gt;  &#37; modulus = remainder   14 &#37;12 = 2 </br><br>
-            Dictionaries  has a key and value.  List has values in the position number. </br> So when you have say the 30th input  a name 'key'  is easier to remember or find.</br>
+          <p>Modulus operator  is the &#37; sign and calculates  the  remainder. </p> <br>
+            &lt;Number&gt;  &#37; modulus = remainder   14 &#37;12 = 2 <br><br>
+            Dictionaries  has a key and value.  List has values in the position number. <br> So when you have say the 30th input  a name 'key'  is easier to remember or find.<br>
             Not in order, list is in order.
             Note can have nested dictionary.
             {}. <br>
             Can edit  like list. String cannot be modify , immutable . <br><br>
             To add  new key/value = (name of dictionary)dict ["new  key"]=  "new value" 
-
-
-
-
       </div>
      </div>
-
     </div>
-  
-
  <div class="col-6">
   <div class="lesson-notes">
       <div class="lesson-title">
           <h2> lesson 4.5 Working with App eng </h2>
       </div>
       <div>  
-        <p> app.Jaml file  tell  GAE which python file to use. Also any static files , like css. Libaries are also called hear
+        <p> app.Jaml file  tell  GAE which python file to use. Also any static files , like css. Libraries are also called hear
         </p>
         <p> In the python file at the bottom  part of code, directs to what handler to use when end users request</p>
-
         <pre>
           app = webapp2.WSGIApplication([
           ('/',CourseNotes),('/comments.html',Comments),('/MainPage',MainPage),
            ('/sign', PostWall),('/testing_forloops',Testing)]       , debug=True)
-
         </pre>
-
-        when end user requests a page  it needs to equal one of the first items in the brackets (). then the second item will direct to  part of code needed. first item maps to second item in the bracket. The second item maps to relavent part of code. The second items in the  () is call a handler.
-
+       when end user requests a page  it needs to equal one of the first items in the brackets (). then the second item will direct to  part of code needed. first item maps to second item in the bracket. The second item maps to relevant part of code. The second items in the  () is call a handler.
           <p>   Looks at where the request will be directed in the file (routing).
-
-         </br></p>
+         <br></p>
           In form tag method attribute can be post.<br>
           the code below can be used to look at header requests <br>
           self.response.headers['contemt-type'] ='text/plain'<br>
           self.response.write(self.request)<br>
            But function should be changed to post
-          GET  parameters in url, used for fetching docs, max url length , ok to cache, should be same server, just a link. </br>
+          GET  parameters in url, used for fetching docs, max url length , ok to cache, should be same server, just a link. <br>
          POST  parameters in body after header, used for updating data, no max length , not ok to cache, ok to change server. Need form
-
-
       </div>
      </div>
-
     </div>
   </div>
   <div class="row">
@@ -744,14 +673,14 @@
       </div>
       <div>        
            <p> Validation, on server side that input is what was expected.
-            Server can receive  junk. </br>
-            If using drop downs , still need to verify data and advise user of any errors </br>
-            If checking numbers, check input isdigit and convert to int </br> </p>
-            User   Sends a  GET form, server sends form data, user sents POST form , server sends  good or bad message<br>
+            Server can receive  junk. <br>
+            If using drop downs , still need to verify data and advise user of any errors <br>
+            If checking numbers, check input isdigit and convert to int <br> </p>
+            User   Sends a  GET form, server sends form data, user sends POST form , server sends  good or bad message<br>
             get function sends the form to end user. <br>
             post function  accepts user input
             <h4>Validation : </h4>
-            Verify input, if error, render form again, include error message </br>
+            Verify input, if error, render form again, include error message <br>
             if form has a post method,  need def post (self) function<br>
             string substitution = &#37;s<br>
             given_string=" i think  &#37; and &#37; are thing to do"
@@ -760,11 +689,9 @@
                 return given _string % (s1,s2)
 
               print sub ("run","sleep")  
-
             </pre>
            <p> i think  <b>run</b> and  <b>sleep</b> are thing to do</p>
-
-           can used a dictonary to substitute named vales <br>
+           can used a dictionary to substitute named vales <br>
            given_string=" i think  &#37;(run) and &#37;(sleep) are thing to do
            <pre>
            def sub (run,sleep)
@@ -772,18 +699,17 @@
            print sub ("talk","walk")
            </pre>
            <p>i think  <b>talk</b> and <b>walk</b> are thing to do</p>
-            Html escaping to stop user input using html. </br>
+            Html escaping to stop user input using html. <br>
            escape characters substitute for html .<br> Can search for escape characters HTML for full list
            <a href="http://www.theukwebdesigncompany.com/articles/entity-escape-characters.php?PHPSESSID=8cbbddde9a9c9825467546f1c98fe119"> html escape characters </a>
-
            <pre>
            Def  escape(s)
-             Use.   for ( i, o ) in (( "&", "& amp ;") :
+             Use.   for ( i, o ) in (( "&#37;", "&#37; amp ;") :
               s = s.replace (i,o)
             return s
            </pre>
-           Easier way is to  use import cgi    ,cgi .escape ( s. quote =True ) built in python </br>
-           This stops user added HTML to post which <b>could corrupt code</b> </br>
+           Easier way is to  use import cgi    ,cgi .escape ( s. quote =True ) built in python <br>
+           This stops user added HTML to post which <b>could corrupt code</b> <br>
            Jinja 2  has auto escape function as well<br>
            <p>template_dir = os.path.join(os.path.dirname(__file__), 'templates')
            jinja_env =jinja2.Environment(loader = jinja2.FileSystemLoader(template_dir ), autoescape =True)</p>
@@ -798,38 +724,54 @@
           <h2> lesson 4.7 HTML Templates </h2>
       </div>
       <div>        
-           <p> Templates reduces repetitive  HTML. Produce a base html file which will have code that will be used for all other HTML files</br>
-          </br>
+           <p> Templates reduces repetitive  HTML. Produce a base html file which will have code that will be used for all other HTML files<br>
+          <br>
             <h3>Template library is a library to build complicated strings html</h3>
-             External  library in jaml , use library </br>
-             Import jinja2 in py file.  Jinja2 is a built in into Google app eng. jinja2 is a template library and is similar to other templating libraries. </br> </p>
-             Create html template with substitutes </br>
-             <b>Always used to escape html  input, Auto escape = true   And pipe vertical line safe, if html input ok</b>
+             <h3> External  library in jaml , use library.</h3> <br><br>
+             
+             libraries: <br>
+              - name: webapp2<br>
+              version: latest<br>
+              - name: jinja2<br>
+              version: latest<br> <br> 
+            <h3>Import jinja2 in py file. </h3><br>
+                add below code to python, which tells jinja the location of template file.Current dir add templates files location, <br>
+                jinja will load using templates located in current dir <br><br>
+                template_dir = os.path.join(os.path.dirname(__file__), 'templates') <br> 
+               jinja_env =jinja2.Environment(loader = jinja2.FileSystemLoader(template_dir ), autoescape =True)<br><br>
+               <p>
+              Jinja2 is a built in into Google app eng. jinja2 is a template library and is similar to other templating libraries. <br> </p>
+             <h3>Create html template with substitutes</h3>
+              { &#123; name &#125;} the name parameter will be substituted <br>
+              need to curly brackets  each side<br>
+              statement syntax <br>
+              {&#37; statement &#37;} <br>
+              {&#37; end statement &#37;} <br>
+             <b>Always used to escape html  input, Auto escape = true .  Could use pipe vertical line safe, if html input ok</b>
               Min code in template , Min html in code eg none
              <h4>Template Inheritance </h4>
-              For example title and footer could be used again  and again. </br>
-              Temletaes reduces  repeatable code. When changing part of the base HTML code, changes will be replicated to all other child html files. </br>
-              Body will be unique but we can share title and footer. Unique area can be called  by  block content, then endblock </br>
-              On infant html call base html. 
-             <per>
-              { &#37; extends " base.html" &#37;}
-              { &#37; block content &#37;}
-              { &#37; endblock per &#37;}
-              </per>
+              For example title and footer could be used again  and again. <br>
+              Templates reduces  repeatable code. When changing part of the base HTML code, changes will be replicated to all other child html files. <br>
+              Body will be unique but we can share title and footer. Unique area can be called  by  block content, then endblock <br>
+              On infant html call base html. <br><br> 
+              { &#37; extends " base.html" &#37;}<br> <br>
+              { &#37; block content &#37;}<br><br>
+              { &#37; endblock &#37;}<br>             
               <ul>
+                <li>Always auto escape</li>
                 <li>Separate different types of code</li>
                 <li>Makes more readable code</li>
+                <li>minimize code in templates</li>
+                 <li>minimize HTML in code</li>
                 <li>More secure website</li>
                 <li>Html that is easier to modify</li>
               </ul>
-               Jinja.pocoo.org for more information on templates </br>
+               Jinja.pocoo.org for more information on templates <br>
                if there are many divs with same structure, then can use a for loop. Add repeated elements 
       </div>
      </div>
-
     </div>
   </div>
-
 <div class="row">
  <div class="col-6">
   <div class="lesson-notes">
@@ -838,16 +780,19 @@
       </div>
       <div>        
             <h4>Database is used to store information from users</h4>
-              A program that stores and retrieve large amount of structured data </br>
-              Could also be the machine running the program and even a group of servers </br>
+              A program that stores and retrieve large amount of structured data <br>
+              Could also be the machine running the program and even a group of servers.<br>
               Relational Databases uses Tables,   
-              Every entry is a row </br>
+              Every entry is a row <br>
               Querying a database by writing python  code is difficult 
-              Error pron,Tedious and Slow </br>
-              Types of database </br>
-              Relational (SQL). MySQL Goole app engines data store , Dynamo
-             SQL structured query language
-             SELECT. *   From links WHERE ID=5 </br>
+              Error pron,Tedious and Slow <br>
+              Types of database <br>
+              Relational (SQL). MySQL Google app engines data store , Dynamo<br>
+
+             SQL <b>structured query language</b><br>
+             SELECT. *   From links WHERE ID=5 <br>
+             * = all columns, from table called links , constraint is id= 5<br>
+             <h3> steps to add data to GAE</h3>
              <ul>
                 <li>Import module ndb</li>
                 <li>Create class with attributes</li>
@@ -858,20 +803,23 @@
                 <li>Query data eg   Query = picture.query( ) order ( picture.date)</li>
                 <li>.fetch    ( fetch data) eg  picture _list= query.fetch(5)</li>
               </ul>
-             Print  picture_list [0]   Will print first attribute in the class </br>
+             Print  picture_list [0]   Will print first attribute in the class <br>
              Len gives the amount of entities (objects)
-             Can use for picture in query : </br>
-            Print picture  . attribute </br>
+             Can use for picture in query : <br>
+            Print picture  . attribute <br>
             Render_html = Html % ( position1, position 2). Replaces %s in html 
-            Self.response.out.write ( render_html)
-
-
+            Self.response.out.write ( render_html)<br><br>
+            indexes , increase speeds of queries. uses dictionaries, can query using the key.<br>
+            <h2>ACID  Atomicity, Consistency,Isolation, Durability.</h2>
+              <ul>
+                <li>Atomicity: all parts of transaction succeeds or fails together: like a  team can win or lose together</li>
+                <li>Consistency: update all of the transaction at the same time: telling all the team members at the same time</li>
+                <li>Isolation: no transaction can interfere with another: interview with one person should not interfere with another </li>
+                <li>Durability: data not lost after committed: teams stores spreadsheets on shared drive , which is backup </li>
+              </ul>
       </div>
      </div>
-
     </div>
-  
-
  <div class="col-6">
   <div class="lesson-notes">
       <div class="lesson-title">
@@ -881,7 +829,6 @@
             
       </div>
      </div>
-
     </div>
   </div>
 <a href="http://jigsaw.w3.org/css-validator/check/referer">
@@ -889,8 +836,6 @@
         src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
         alt="Valid CSS!" />
     </a>
-
-
 {% endblock %}
 
  

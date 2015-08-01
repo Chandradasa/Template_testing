@@ -15,11 +15,6 @@ handlers:
   static_files: favicon.ico
   upload: favicon\.ico
 
-
-
-# -url: /add_comments
-# script: comments.app
-
 - url: .*
   script: main.app
 
