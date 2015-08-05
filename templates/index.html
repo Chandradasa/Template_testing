@@ -672,8 +672,10 @@
           <h2> lesson 4.6 Validation</h2>
       </div>
       <div>        
-           <p> Validation, on server side that input is what was expected.
-            Server can receive  junk. <br>
+           <p> It is <b>important to validate end user input</b><br> End users could input junk which could overload the server. End users could hack the database to obtain confidential data.<br>
+           Validation is key to ensure  that on the server side, input is what is  expected. This is  to prevent system crashes, malicious database manipulation and even database corruption.<br></p>
+
+           <p>Validation also helps the end user, to guide them entering the require data. It can be frustrating when a reply to a POST just says invalid input with no explanation. <br>
             If using drop downs , still need to verify data and advise user of any errors <br>
             If checking numbers, check input isdigit and convert to int <br> </p>
             User   Sends a  GET form, server sends form data, user sends POST form , server sends  good or bad message<br>
