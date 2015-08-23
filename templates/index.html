@@ -1,7 +1,8 @@
 {% extends "base.html" %}
 {% block content %}
+
 <a href="/MainPage"> click hear to add comments</a><br><br>
-  <h1 class="title"> Intro to programming</h1>
+  <h1 class="title"> Intro to programming &#119070;</h1>
     <div class="row">
       <div class="col-6">
         <div class = "lesson-notes">
@@ -821,7 +822,8 @@
               </ul>
       </div>
      </div>
-    </div>
+   </div>
+  
  <div class="col-6">
   <div class="lesson-notes">
       <div class="lesson-title">
@@ -829,6 +831,306 @@
       </div>
       <div>        
             
+      </div>
+     </div>
+    </div>
+     </div>
+<div class="row">
+ <div class="col-6">
+  <div class="lesson-notes">
+      <div class="lesson-title">
+          <h2> 5.1 meet javascript</h2>
+      </div>
+      <div>
+         <h3> Programming language of the web</h3>
+          To declare a variable always use var infront, note that python did not need this.<br>
+          Example: var Lights= document.getElementByClassName ("Light);
+        <pre>
+          var  variableName = someValue
+        </pre>
+         Array (lists in Python ) , functions and object (similar to dictionaries in Python  ) all need var when declaring.
+        <pre>
+         var firstName = "dave ";<br>
+         var age = 32;
+       </pre>
+         console.log(firstName); is similar to print command in Python and good for debugging.<br>
+         Need semi colon at the end. Python does not need semi colon. <br>
+         Using helper js file , we can replace %data% with variables. <br>
+        Call id in html to prepend or append eg <br>
+       <p> Arrays have a list of values. var myArray=[item1,item n];</p>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">JavaScript string methods</a>
+               
+
+        <h3>Object literal notation </h3>
+        There are no classes in JavaScript <br>
+        Var my Obj = { } ;<br>
+        Objects similar to dictionary.<br>
+        A property  <br>
+        var bio = { "name" : "dave"}; <br>
+        $ (" #main"). append(bio.name); <br>
+        # calls id <br>
+        Able to add properties , by dot notation or bracket. <br>
+        var not needed. <br>
+        myObj.property=someValue<br>
+        <h4>JSON  JavaScript Object Notation </h4>
+        Popular and simple format for storing and transferring nested or hierarchical data.<br>
+        Should lint JSON to find syntax errors. linter is software that analyzes code for errors <br>            
+      </div>
+     </div>
+    </div>
+ <div class="col-6">
+  <div class="lesson-notes">
+      <div class="lesson-title">
+          <h2> 5.2 the power of APIs</h2>
+      </div>
+      <div> 
+          <br><b>App programming interface API.  Servers communicating with other servers.</b><br><br>
+          User requests information from server, then server requests information from other servers.<br>
+          XML similar to html, but must have open and closing tag. It is more rigorous than html.<br><br>
+          Dom doc object model.To parse xml in Python use <br>
+           from xml.com Import minidom, for small amounts of text.<br>
+          minidom.parseString
+          <h3>APIs allow programmers to interface with other programs </h3>
+          <h2>How to be good citizen on the internet.</h2>
+          Use a good user-agent. So if you are pounding server, the server owner can contact you.<br>
+          Rate-limit yourself. Add import time to slow down requests.<br>
+          Other protocals comms across internet<br>
+         <ul>
+          <li>SOAP, complicated </li>
+          <li>Protol buffers</li>
+          <li>Thrift</li>
+          <li>Plain-text</li>
+         </ul>
+          Try to use common protocols and data formats<br>
+          Example user requests information on countries: population, culture, temperature and holiday packages.<br>
+          The server getting the POST, could poll other servers and then manipulate data to pass back to user.<br>
+          Course example used  one api to get location from ip address and used another api to generate  a map with pin locators.<br>
+         <b>Open source allows programmers to use developed code.</b>                 
+      </div>
+     </div>
+    </div>
+  </div>
+  <div class="row">
+ <div class="col-6">
+  <div class="lesson-notes">
+      <div class="lesson-title">
+          <h2> 5.3 recursive and parallel computing</h2>
+      </div>
+      <div> 
+        <h2>Recursive definition </h2>
+        Word -> counter - word. Can make indefinite amount of words.<br>
+        Circular definition,as word keeps on appearing and it is non terminal. <br>
+        Need 2 definitions  to have a recursive definition.<br>
+        1 word equivalent to something and word. Recursive case.
+        Defined in terms of smaller version of itself. <br>
+        2 what word equals to . A stopping definition. Base case. It is a starting point .<br>
+        It is not defined in terms of itself. Smallest input , already know the answer<br>
+        Analogy  2 equations to solve simultaneous equations.<br>
+        <pre>Factorial (n) = n *(n-1)* (n-2)*  etc * 1
+            Factorial (0)= 1. Base case
+            Factorial (n)=. n * factorial (n-1). Recursive case
+          Def factorial (n):
+              If n == 0
+                  return 1
+                else 
+                      Return n *factorial (n-1)
+          Each time n reduces by 1 and the base case stops procedure.
+        </pre>
+         Palindrome word can written backwards but reads the same, eg level <br>
+         Base case : ' '. True  Empty string is a palindrome <br>
+         recursive case is the first and last characters are equal, then are the next 2 and so on.<br><br>
+       <pre>
+        Def is_ palindrome (s):
+           If s == ' ' :
+               return True
+           else:
+               If s [0] ==s[-1]:
+                  return is_palindrome (s[1:-1] 
+  note -1 in indexing does not include last number. 
+  Hence this line ignore the first and last characters
+               else
+                    return false
+        </pre>            
+        MapReduce one way to do <b> parallel</b> computing <br><br>
+        Splitting up data and then working on data simultaneously.<br>
+        The mappers look at their allocated data at the same time. Intermediate records, into keys and values , eg dictionary.<br>
+        Shuffle and sort phase, this is when the reducers  have keys allocated to manipulate relative data.<br>                   
+      </div>
+     </div>
+    </div>
+ <div class="col-6">
+  <div class="lesson-notes">
+      <div class="lesson-title">
+          <h2> 5.4 solving big problems</h2>
+      </div>
+      <div> 
+          <h3> Methodology to manage big problems</h3>
+          <ol>
+            <li>Bullet point what the scope of the project is.</li>
+            <li>Review each bullet points</li>
+            <li>Eg string, fn , dictionary</li>
+            <li>Large projects , think of pacing.</li>
+            <li>Analogy  key stages of a projects. Eg the project can be divided into subprojects.</li>
+            <li>When a key stage is reach, can be reviewed, closed and then move to the next stage</li>
+          </ol> 
+           <h2>Take one step at a time</h2>              
+      </div>
+     </div>
+    </div>
+    </div>
+     <div class="row">
+ <div class="col-6">
+  <div class="lesson-notes">
+      <div class="lesson-title">
+          <h2> 5.5 make pages look good</h2>
+      </div>
+      <div> 
+          <br>Go to developement tools , then can look at emulator to see how web pages look on different devices.<br><br>
+          Chrome emulation  , icon looks like a small iphone, next to elements<br><br>
+          <a href="https://dash.generalassemb.ly">Dash website </a> Dash. generalassemb.iy. <br><br>
+          Excellent Web site to learn how to  improve web site looks. <br><br>
+          Always need input tag to get information from user<br><br>
+          Input type="email" <br>
+          Type is called <b>attribute</b>, email is the attribute's <b>value</b><br><br>
+          Placeholder allows content to be seen.eg Placeholder="your emails "<br>
+          Img tag to add image<br><br>
+          Background property could have a url value url (" url"); could take a picture and use as background.<br>
+          Background-size: cover . Stop appearing tiled.<br>
+          Background-position: center <br><br>
+          Border :0; For input gets rid of default style<br>
+          Input [type="submit"] to add style to specific type.<br><br>
+          A Tag has attribute called href . Can be put on each li tag in an ordered or unordered list a <br><br>
+          Link tag , href= "url" ref= "stylesheet" <br><br>
+          For ul padding needed if need to be center <br><br>
+          li  display : inline to list horizontal <br>
+          Display block goes across whole page, inline does not take the whole page<br>
+          Article tags can be used to give generic style<br>
+          Margin: 0 auto ; to align centre<br>
+        <p>@media (max-width: 500px)
+         For smaller size screen ,  styles are activated <br>
+         Eg li display : block so that  list becomes vertical when screen is small.<br>
+         Hex colour #f00 ,  rgb.  Hex  from 0 to f <br>
+         </p>
+        <h3> JavaScript </h3>
+         $("button"). on("click", function ( ) {
+         alert("banner") });<br>
+         Button is the element  whose events we want to listen <br>
+         On( ) function sets up event listeners.<br>
+        Click is the event type,  the rest thing to do.<br>
+        After on there are 2 parameters. Click and function.<br>                   
+      </div>
+     </div>
+    </div>
+ <div class="col-6">
+  <div class="lesson-notes">
+      <div class="lesson-title">
+          <h2> front end option 1</h2>
+      </div>
+      <div> 
+           <h2> Front end option 1 make your page look great</h2>
+           <h3>Intro to html and css</h3>
+           <a href="https://www.udacity.com/course/viewer#!/c-ud304/l-2617868617/m-2698138588">Udacity: intro to html and CSS</a>
+          Humans look from left to right, down then left to right. Most web sites have a grid .<br>
+          Frameworks <br>
+          Responsive web page:  different resolutions , eg desktops and mobile phone .<br>
+          Need to ensure that web site looks good on large and mobile screens. <br>
+          Note that mobile and tablet users may use fingers as a mouse and have 2 orientations.<br>
+          This is called adaptive design.<br><br>
+          Define layout into grids.<br>
+          Row with 12 columns <br>
+          Create classes  row , and 12 columns <br>
+          <pre>
+          .row {
+             Width:100%;
+          }
+          .col-1{
+
+            width: 8.33%;
+          }
+
+          .col-2{
+
+            width: 16.66%;
+          }
+          </pre>
+          Need to add display:flex;flex-wrap:wrap;  to put columns  adjacent .<br><br>
+          Need to use percentage width  instead of fixed  px length for responsive web page<br><br>
+          Padding space within the element and margin is outside element.<br>
+          Overflow: auto; to have a lot of text in a small area<br>
+          Media queries  changes css properties , depending on device , screen size and colour.<br>
+          <pre>
+          @media only screen and (max-width: 300px) { 
+          
+          css will be added when screen is equal or less than 300px
+          Could change display : block
+
+            }
+          </pre> 
+          Different browsers have  different behaviours <br>
+          Normalize.css  allows css to be interpreted by all browsers correctly.<br>
+          Copy code from  Normalize.css <br><br>
+          <a href="https://code.google.com/p/normalize-css/">Normalize link</a>
+          Can add placeholder img in your web. Img src = <br>
+          Fonts,can use google fonts. Add link in head and in css <br>
+          Frameworks like <b>bootstrap</b>  can be used to customised  web site <br><br>
+           <h3>Frameworks</h3> 
+          <a href="http://getbootstrap.com/">Twiiter Bootstrap</a>
+
+          Bootstrap requires containers wrapped around  row. Columns need to be in row <br>
+          Div class= " container"  fixed width container,   -fluid for spanning entire width.<br>
+          Bootstrap is big , can customise  folders needed.<br>
+          Eg typography , grid systems, modals <br><br>
+          Download files, there will be  minified  files as well. 
+          Min files  has no white space , can be downloaded faster. For development normal files are needed <br><br>
+          .img -responsive class , allows image to reduce size <br>
+          Modal allows extra data when clicked on <br>
+          Data-toggle= "modal"   Data -target =# id <br>
+          Make a class modal <br>
+          <h2>Responsive web design</h2>
+          <a href="https://www.udacity.com/course/viewer#!/c-ud893/l-3523969367/m-3525619348">Udacity :Responsive Web Design Fundamentals</a>
+           Mobile market getting bigger,  hence web page needs to be responsive to different devices <br>
+          <h3>Viewport</h3> 
+          Device Independent Pixels: browser will see DIP, then gets scaled to hardware pixels <br>
+          If there is no meta viewport, browser will think  980px DIP when it has only 360 dips. The browser with font-boosting which tries to enlarge some content. A mess.<br><br>
+          Meta name ="viewpoint" content="width =device-width,initial-scale=1" <br>
+           <a href="http://www.w3schools.com/css/css_rwd_viewport.asp"><br>w3school:viewpoint</a>
+          Use relative widths not absolute eg % not px, to ensure image is scaled to each device. <br>
+          In css <br>
+          <pre>
+          Catch all img, embed, object, video{
+          Max-width : 100%;
+          }
+          Tap targets should be big enough for a finger.  40px x40px   Eg
+          nav a , button { 
+                  min-width: 48px;
+                   min-height: 48px;
+          }
+          </pre>
+          <h3>Start with mobile design then tablet then desktop.</h3>
+          Prioritise content and performance.<br>
+          Padding em around  button. em seems to be the actual button size scaler.<br>
+          Eg 1.5 em = 1.5 x the size of button<br>
+          Breakpoints are when the web changes according to the size of  width.<br>
+          Breakpoints are an art not a science, as it is subjective on when a break point is required.<br>
+          Column changes , 4 common types<br>
+          <ul>
+            <li>Column drop</li>
+            <li>Mostly fluid</li>
+            <li>Layout shifter</li>
+            <li>Off canvas </li>
+          </ul>
+         Resposive Image  needs further  investigation 
+         <h4>Tables</h4>
+        Eg Hidden columns, no more tables , contained tables<br>
+        As viewport size gets smaller, unimportant columns can be hidden.<br><br>
+        Not good if user needs to see columns that have been hidden<br>
+        No more tables : force all table characters to display: block<br><br>
+        Wrap  table with div contained_table  and set width :100% and overflow-x :auto;<br>
+        Table flows  across small screen.<br><br>
+        Comfortable reading, average 65 characters per line <br>
+        Font around 16 px<br>
+        Line-height: 1.2 em;<br>
+        Minor breakpoints: small changes, margins and padding, font sizes<br>
       </div>
      </div>
     </div>

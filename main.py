@@ -58,26 +58,26 @@ DEFAULT_WALL = 'Public'
 # ~1/second.
 
 def wall_key(wall_name=DEFAULT_WALL):
-  """Constructs a Datastore key for a Wall entity.
+    """Constructs a Datastore key for a Wall entity.
 
-  We use wall_name as the key.
-  """
-  return ndb.Key('Wall', wall_name)
+    We use wall_name as the key.
+    """
+    return ndb.Key('Wall', wall_name)
 
 # These are the objects that will represent our Author and our Post. We're using
 # Object Oriented Programming to create objects in order to put them in Google's
 # Database. These objects inherit Googles ndb.Model class.
 class Author(ndb.Model):
-  """Sub model for representing an author."""
-  identity = ndb.StringProperty(indexed=True)
-  name = ndb.StringProperty(indexed=False)
-  email = ndb.StringProperty(indexed=False)
+    """Sub model for representing an author."""
+    identity = ndb.StringProperty(indexed=True)
+    name = ndb.StringProperty(indexed=False)
+    email = ndb.StringProperty(indexed=False)
 
 class Post(ndb.Model):
-  """A main model for representing an individual post entry."""
-  author = ndb.StructuredProperty(Author)
-  content = ndb.StringProperty(indexed=False)
-  date = ndb.DateTimeProperty(auto_now_add=True)
+    """A main model for representing an individual post entry."""
+    author = ndb.StructuredProperty(Author)
+    content = ndb.StringProperty(indexed=False)
+    date = ndb.DateTimeProperty(auto_now_add=True)
 
 
 class MainPage(Handler):
