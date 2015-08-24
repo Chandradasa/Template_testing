@@ -858,9 +858,16 @@
          Using helper js file , we can replace %data% with variables. <br>
         Call id in html to prepend or append eg <br>
        <p> Arrays have a list of values. var myArray=[item1,item n];</p>
-        <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">JavaScript string methods</a>
-               
-
+       <h4>JavaScript Strings</h4>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">JavaScript string methods</a><br>
+        <p>
+        This website created by Mozilla provides wealth of information on JavaScript. The actual web page focusing on standard built-in string objects.<br>
+        When reviewing JavaScript fundamental courses, this website can be used to review coding. <br> <br>
+        Reading the code on this website allows better understand on what the code is doing. 
+        When reviewing JavaScript string manipulation, this is a 
+        good site to compliment courses. Example  when reviewing  JavaScript Basics, varies  coding can be reviewed on website for further clarification.<br>
+        Example, how to  convert first letters to capitals
+        </p>
         <h3>Object literal notation </h3>
         There are no classes in JavaScript <br>
         Var my Obj = { } ;<br>
@@ -985,39 +992,64 @@
           <h2> 5.5 make pages look good</h2>
       </div>
       <div> 
-          <br>Go to developement tools , then can look at emulator to see how web pages look on different devices.<br><br>
-          Chrome emulation  , icon looks like a small iphone, next to elements<br><br>
+          <br>  To investigate how a web site with look on small devices like an iphone, can use the following steps:
+          <ol>
+             <li> Go to development tools</li>
+             <li>select view, developer tools</li>
+             <li>look at emulator to see how web pages look on different devices</li>
+             <li>The Chrome emulation  , icon looks like a small iphone, next to Elements options</li>
+           </ol>  
           <a href="https://dash.generalassemb.ly">Dash website </a> Dash. generalassemb.iy. <br><br>
-          Excellent Web site to learn how to  improve web site looks. <br><br>
-          Always need input tag to get information from user<br><br>
-          Input type="email" <br>
-          Type is called <b>attribute</b>, email is the attribute's <b>value</b><br><br>
-          Placeholder allows content to be seen.eg Placeholder="your emails "<br>
-          Img tag to add image<br><br>
+          Excellent Web site to learn how to  improve web site looks. <br>
+          The web site is divided into projects. <br>
+          <ul>
+            <li> Project 1: Build a personal Website</li>
+            <li>Project 2: build a responsive BlogTheme</li>
+            <li> Project 3: build a small business Website</li>  
+            <li> Project 4: build a CSS robot</li>
+            <li> Project 5: build a madlibs game</li>  
+          </ul>
+           The projects are not video tutorials. However each step demonstrates fundamental  on HTML, CSS and JavaScript.<br>
+           User will go through each step to complete small projects. <br>
+           User will be asked to type in code for each concept being focused on. <br> 
+           Note that this website is great to learn concepts and take very small steps, so suitable for all levels of software programmers.
+          <h3> Tag notes</h3>
+          <ul>
+            <li>Always need input tag to get information from user</li>
+            <li>Input type="email", requires an email address </li>
+            <li>Type is called <b>attribute</b></li>
+            <li>  Placeholder allows content to be seen by user.eg Placeholder="your emails </li>
+            <li> Img tag to add image</li>
+            <li>A Tag has attribute called href </li>
+            <li> Link tag , href= "url" ref= "example"</li>
+            <li>Article tags can be used to give generic style</li>
+          </ul>
+           <h3>Background notes</h3>
           Background property could have a url value url (" url"); could take a picture and use as background.<br>
           Background-size: cover . Stop appearing tiled.<br>
           Background-position: center <br><br>
           Border :0; For input gets rid of default style<br>
           Input [type="submit"] to add style to specific type.<br><br>
-          A Tag has attribute called href . Can be put on each li tag in an ordered or unordered list a <br><br>
-          Link tag , href= "url" ref= "stylesheet" <br><br>
-          For ul padding needed if need to be center <br><br>
-          li  display : inline to list horizontal <br>
+          <h3> display notes </h3>
+          For ul or ol unordered/ ordered lists, padding is needed  to center,as default the list is displayed left. <br><br>
+          li  display : inline to list horizontal, as default is vertical<br>
           Display block goes across whole page, inline does not take the whole page<br>
-          Article tags can be used to give generic style<br>
           Margin: 0 auto ; to align centre<br>
-        <p>@media (max-width: 500px)
+
+        <h3>@media (max-width: 500px) </h3>
          For smaller size screen ,  styles are activated <br>
-         Eg li display : block so that  list becomes vertical when screen is small.<br>
+         Example; li display : block so that  list becomes vertical when screen is small.<br>
+         <h4> Colour</h4>
          Hex colour #f00 ,  rgb.  Hex  from 0 to f <br>
-         </p>
         <h3> JavaScript </h3>
-         $("button"). on("click", function ( ) {
-         alert("banner") });<br>
-         Button is the element  whose events we want to listen <br>
-         On( ) function sets up event listeners.<br>
-        Click is the event type,  the rest thing to do.<br>
-        After on there are 2 parameters. Click and function.<br>                   
+        <pre>
+         $("button"). on("click", function ( ) {alert("banner") });
+         </pre>
+         <ul>  
+           <li>Button is the element  whose events we want to listen</li>
+           <li> On( ) function sets up event listeners.</li>
+           <li>Click is the event type,  the rest thing to do.</li>
+           <li>After "on" there are 2 parameters. Click and function.</li>
       </div>
      </div>
     </div>
@@ -1063,13 +1095,16 @@
           
           css will be added when screen is equal or less than 300px
           Could change display : block
-
             }
           </pre> 
-          Different browsers have  different behaviours <br>
+         <h3> Normalize </h3>
+          <p>Different browsers have different behaviours <br>
           Normalize.css  allows css to be interpreted by all browsers correctly.<br>
-          Copy code from  Normalize.css <br><br>
+          This code makes browsers render all elements for consistently.It is in line with the modern standards.
+          Copy code from  Normalize.css and placed in the Head section of HTML <br>
+          For this web site  the code has bee placed in the Base HTML where Jinja2  using template inheritance to populate code to other HTML files. 
           <a href="https://code.google.com/p/normalize-css/">Normalize link</a>
+          </p>
           Can add placeholder img in your web. Img src = <br>
           Fonts,can use google fonts. Add link in head and in css <br>
           Frameworks like <b>bootstrap</b>  can be used to customised  web site <br><br>
@@ -1119,7 +1154,7 @@
             <li>Layout shifter</li>
             <li>Off canvas </li>
           </ul>
-         Resposive Image  needs further  investigation 
+         Responsive Image  needs further  investigation 
          <h4>Tables</h4>
         Eg Hidden columns, no more tables , contained tables<br>
         As viewport size gets smaller, unimportant columns can be hidden.<br><br>
